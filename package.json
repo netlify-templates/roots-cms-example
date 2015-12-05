@@ -12,7 +12,7 @@
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",
     "moment": "^2.10.6",
-    "roots-posts": "^0.2.1",
+    "roots-collections": "^0.3.0",
     "roots-records": "^0.5.1",
     "rupture": "0.6.x",
     "stylus": "0.52.x"

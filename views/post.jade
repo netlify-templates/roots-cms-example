@@ -2,8 +2,8 @@ extends layout
         
 block content
   article.box.post
-    div.image.featured(style={"background-image": "url(" + post.banner + ")"})
+    div.image.featured(style={"background-image": "url(" + entry.banner + ")"})
     header
-      h2= post.title
-      p= post.shortdesc
-    != post.body
+      h2= entry.title
+      p= entry.shortdesc
+    != entry.body

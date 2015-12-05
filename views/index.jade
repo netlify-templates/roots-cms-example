@@ -23,7 +23,7 @@ block content
           header.major
             h2 Recent Episodes
           div.row
-            each post in posts.byDate().slice(0,2)
+            each post in posts.sort('date', 'desc').slice(0,2)
               .6u
                 section.box
                   a.image.featured(href=post.permalink)

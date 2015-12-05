@@ -6,7 +6,7 @@
           header
             h2 More Episodes
           ul.dates
-            each post in posts.byDate().slice(2,8)
+            each post in posts.orderBy('date','desc').slice(2,8)
               li
                 span.date
                   != dateFormat(post.date, "MMM [<strong>]D[</strong>]")
