@@ -6,7 +6,52 @@ html
     title Content Manager
   
     link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
+    link(rel="stylesheet", href="/css/skel.css")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/style-desktop.css")
+
+    style.
+      .container {
+        width: auto;
+        max-width: 1200px;
+      }
+      body.ember-application .cms-list-entry {
+        background: #fff;
+      }
+
     base(href="/admin/")
   body
+    script(type="text/x-handlebars" data-template-name='cms/preview/posts').
+      <div id="main-wrapper">
+        <div class="container">
+          <!--Content-->
+          <article class="box post">
+            {{#if entry.banner }}
+            {{cms-preview field='banner'}}
+            {{/if}}
+            <header>
+              <h2>{{ entry.title }}</h2>
+              <p>{{ entry.shortdesc}}</p>
+            </header>
+            {{cms-preview field='body'}}
+          </article>
+        </div>
+      </div>
+
+    script(type="text/x-handlebars" data-template-name='cms/preview/characters').
+      <div id="main-wrapper">
+        <div class="container">
+          {{#cms-preview field="data" as |character| }}
+            <section class="box">
+              <span class="image featured">{{cms-preview field="image" from=character}}</span>
+              <header>
+                <h3>{{character.name}}</h3>
+              </header>
+              <p>{{character.description}}</p>
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
+  
     script(src="//cms.netlify.com/assets/vendor.js")
     script(src="//cms.netlify.com/assets/cms.js")
