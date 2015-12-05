@@ -18,6 +18,7 @@ html
       body.ember-application .cms-list-entry {
         background: #fff;
       }
+    script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "development") + "\";"
 
     base(href="/admin/")
   body
