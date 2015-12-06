@@ -8,7 +8,7 @@ production:
     repo: owner/repo # Path to your Github repository
     branch: master # Branch to update (master by default)
 
-media_folder: "img/uploads" # Folder where user uploaded files should go
+media_folder: "public/img/uploads" # Folder where user uploaded files should go
 public_folder: "public"
 
 collections: # A list of collections the CMS should be able to edit
@@ -17,7 +17,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Banner", name: "banner", widget: "image", class: "image featured"}
       - {label: "Short Description", name: "shortdesc", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
