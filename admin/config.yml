@@ -8,8 +8,8 @@ production:
     repo: owner/repo # Path to your Github repository
     branch: master # Branch to update (master by default)
 
-media_folder: "public/img/uploads" # Folder where user uploaded files should go
-public_folder: "public"
+media_folder: "assets/img/uploads" # Folder where user uploaded files should go
+public_folder: "assets"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -36,5 +36,5 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
-              - {label: "Image", name: "image", widget: "image", media_folder: "public/img"}
+              - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
               - {label: "Description", name: "description", widget: "string"}
