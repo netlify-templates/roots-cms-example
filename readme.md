@@ -11,7 +11,7 @@ Make sure to install the [netlify-git-api](https://github.com/netlify/netlify-gi
 Then:
 
 ```bash
-git clone https://github.com/netlify-templates/hexo-cms-example.git
+git clone https://github.com/netlify-templates/roots-cms-example.git
 cd roots-cms-example
 netlify-git-api users add
 netlify-git-api serve
